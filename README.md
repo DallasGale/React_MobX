@@ -21,5 +21,6 @@ etc...
 
 - MobX State Tree - https://github.com/mobxjs/mobx-state-tree)
 
-**Debugging**
+
+## Debugging
 - Dev Tools - npm install mobx-react-devtools
