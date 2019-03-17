@@ -1,6 +1,7 @@
 # React with MobX
 
-## The Basics - adapted from https://mobx.js.org/
+## The Basics
+Adapted from https://mobx.js.org/
 
 ### Data Stores
 
