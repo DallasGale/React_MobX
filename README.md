@@ -1,7 +1,7 @@
 # React with MobX
 
 
-1. **2 x Data Stores**
+### **2 x Data Stores**
 1. UI State
 2. Domain State
  
