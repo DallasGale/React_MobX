@@ -18,13 +18,19 @@ etc...
 
 **2. Domain State (domain-state-store)**
 - Only one instance of the store
-- Data that your application is all about. eg. Orders, books, galleries, media.
-- Provide backend integration
-- Store data when needed
+- Data that your application is all about. *eg. Orders, books, galleries, media*
+- Provides backend integration
+- Stores data when needed
 - If backend sends updates the existing instances get updated.
-- Test your store can be run server side
+- Tests that your store can be run server side
 
 > The main responsibility of stores is to move logic and state out of your components into a standalone testable unit that can be used in both frontend and backend JavaScript.
+
+
+**3. Domain Objects**
+- Expressed as a *class*, or *constructor function*
+- Can be expressed as plain objects, but classes offer methods
+- Constructor functions can mix *observable* properties and functions, and *non-observable*  properties and methods
 
 - MobX State Tree - https://github.com/mobxjs/mobx-state-tree)
 
