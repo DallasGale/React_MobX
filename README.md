@@ -31,6 +31,7 @@ etc...
 - Expressed as a *class*, or *constructor function*
 - Can be expressed as plain objects, but classes offer methods
 - Constructor functions can mix *observable* properties and functions, and *non-observable*  properties and methods
+- Constructor functions can be strictly type-checked
 
 - MobX State Tree - https://github.com/mobxjs/mobx-state-tree)
 
