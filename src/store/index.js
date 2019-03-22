@@ -1,6 +1,41 @@
 import { action, decorate, observable } from 'mobx';
 
-class Store {
+
+class RootStore {
+    constructor() {
+        this.employeeStore = new EmployeeStore(this);
+        this.counterStore = new CounterStore(this);
+    }
+};
+
+class CounterStore {
+    constructor(rootStore) {
+        this.rootStore = rootStore
+    }
+
+    count = 10    
+
+    incrementCount() {
+        this.count++;
+        console.log(this.count)
+    }
+
+    decrementCount() {
+        this.count--;
+        console.log(this.count)
+    }
+}
+
+
+class EmployeeStore {
+    constructor(rootStore) {
+        this.rootStore = rootStore
+    }
+
+
+
+
+
     employeesList = [
         {
             name: 'Dallas Gale', 
@@ -12,23 +47,28 @@ class Store {
         }
     ]
 
-    // * Actions
-    // * Originally these methods were part of controls.container.js
     clearList() {
-        // console.log('cleared');
         this.employeesList = [];
     }
-
+    
     addEmployee(e) {
         this.employeesList.push(e);
+        console.log(e);
+        console.log(this.employeesList);
     }
-};
+}
+
+
 
  // * With MobX
- decorate(Store, {
-    clearList: action,
+ decorate(RootStore, {
     addEmployee: action,
-    employeesList: observable
+    clearList: action,
+    decrementCount: action,
+    employeesList: observable,
+    count: observable,
+    incrementCount: action,
+    
 });
 
-export const appStore = new Store();
+export const appStore = new RootStore();

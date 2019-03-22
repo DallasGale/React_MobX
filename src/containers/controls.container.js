@@ -7,23 +7,23 @@ class Controls extends Component {
         this.state = {
             theme: ''
         }
+
     }
+
 
 
     addEmployee = () => {
-        // let add = this.props.store.addEmployee;
         const name = prompt("Name: ")
         const salary = parseInt(prompt("Salary: "), 10)
-        this.props.store.addEmployee({name, salary})
-        // console.log(name, salary, this.props.store.addEmployee);
+        this.props.store.employeeStore.addEmployee({name, salary})
     }
 
     clearList = () => {
-        this.props.store.clearList();
+        this.props.store.employeeStore.clearList();
     }
 
     render() {
-        
+        // console.log(this.props.store.employeeStore)
         return (
             <div>
                 <button onClick={ () => this.clearList() }>clear table</button>

@@ -11,7 +11,9 @@ class Table extends Component {
     render() {
 
         const { store } = this.props;
+        let list = store.employeeStore.employeesList;
 
+        // console.log(list);
         return (
             <table border='0' width='100%' cellPadding='10'>
                 <thead bgcolor="black">
@@ -26,7 +28,7 @@ class Table extends Component {
                 </thead>
                 <tbody>
                     {
-                        store.employeesList.map((employee, index) => {
+                        list.map((employee, index) => {
                             return (
                                 <tr key={index}>
                                     <td>
